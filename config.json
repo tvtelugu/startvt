@@ -1,0 +1,10 @@
+{
+  "baseUrl": "https://starshare.st:443",
+  "username": "42166",
+  "password": "42166",
+  "paths": {
+    "live": "/live/42166/42166",
+    "movies": "/movie/42166/42166",
+    "series": "/series/42166/42166"
+  }
+}
