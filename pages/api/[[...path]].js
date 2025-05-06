@@ -5,9 +5,9 @@ import axios from 'axios';
 
 // Configuration
 const CONFIG = {
-  baseUrl: 'http://starshare.org:80',
+  baseUrl: 'https://starshare.st:443',
   paths: {
-    live: '/live/love95/love95',
+    live: '/live/42166/42166',
     movies: '/movies',
     series: '/series'
   },
