@@ -1,47 +1,88 @@
-import fs from 'fs';
+// pages/api/live.m3u8.js
 import path from 'path';
+import { promises as fs } from 'fs';
 
-// Path to the channels configuration file
-const CHANNELS_FILE = path.join(process.cwd(), 'channels.json');
+// Cache configuration
+const CACHE_TTL = 5 * 60 * 1000; // 5 minutes cache
+let channelCache = {
+  data: null,
+  lastUpdated: 0
+};
 
-// Read and validate channels configuration
-let channels = {};
-try {
-  const rawData = fs.readFileSync(CHANNELS_FILE, 'utf8');
-  channels = JSON.parse(rawData);
+// Helper function to load channels
+async function loadChannels() {
+  const now = Date.now();
   
-  // Validate channels structure
-  if (!Array.isArray(channels)) {
-    throw new Error('Invalid channels format - expected array');
+  // Return cached data if still valid
+  if (channelCache.data && now - channelCache.lastUpdated < CACHE_TTL) {
+    return channelCache.data;
   }
-  
-  // Convert to lookup map for faster access
-  channels = channels.reduce((acc, channel) => {
-    if (channel.Name && channel.Url) {
-      acc[channel.Name.toLowerCase()] = channel.Url;
-    }
-    return acc;
-  }, {});
-} catch (error) {
-  console.error('Failed to load channels:', error);
-  process.exit(1);
+
+  try {
+    const filePath = path.join(process.cwd(), 'public', 'channels.json');
+    const fileData = await fs.readFile(filePath, 'utf8');
+    const channels = JSON.parse(fileData);
+    
+    // Transform into more efficient lookup format
+    const channelMap = channels.reduce((map, channel) => {
+      if (channel.Name && channel.Url) {
+        map[channel.Name.toLowerCase()] = channel.Url;
+      }
+      return map;
+    }, {});
+
+    // Update cache
+    channelCache = {
+      data: channelMap,
+      lastUpdated: now
+    };
+
+    return channelMap;
+  } catch (error) {
+    console.error('Failed to load channels:', error);
+    throw new Error('Channel configuration unavailable');
+  }
 }
 
-export default function handler(req, res) {
+export default async function handler(req, res) {
+  // Set proper headers for m3u8 content
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Cache-Control', 'public, max-age=60');
+  
   const { id } = req.query;
 
   // Validate ID parameter
-  if (!id) {
-    return res.status(400).json({ error: 'ID parameter is required' });
+  if (!id || typeof id !== 'string') {
+    res.status(400).json({ error: 'Valid channel ID parameter required' });
+    return;
   }
 
-  // Lookup channel by ID (case-insensitive)
-  const channelUrl = channels[id.toLowerCase()];
-  
-  if (!channelUrl) {
-    return res.status(404).json({ error: 'Channel not found' });
-  }
+  try {
+    const channels = await loadChannels();
+    const streamUrl = channels[id.toLowerCase()];
 
-  // Redirect to the actual stream URL
-  return res.redirect(307, channelUrl);
+    if (!streamUrl) {
+      res.status(404).json({ error: 'Channel not found' });
+      return;
+    }
+
+    // For m3u8 playlists, we might want to proxy the content
+    if (streamUrl.endsWith('.m3u8')) {
+      const proxyResponse = await fetch(streamUrl);
+      const playlist = await proxyResponse.text();
+      res.setHeader('Content-Type', 'application/vnd.apple.mpegurl');
+      res.send(playlist);
+    } 
+    // For direct streams, redirect
+    else {
+      res.redirect(307, streamUrl);
+    }
+    
+  } catch (error) {
+    console.error('Stream error:', error.message);
+    const status = error.message.includes('unavailable') ? 503 : 500;
+    res.status(status).json({ 
+      error: error.message || 'Failed to process stream request' 
+    });
+  }
 }
