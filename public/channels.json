@@ -6,5 +6,401 @@
   {
     "Name": "Premier",
     "Url": "https://fifabd.site/CDNBDIX/TRIN/play.m3u8?id=1019916"
+  },
+  {
+    "Name": "SRTV",
+    "Url": "https://vvsolutions-server11.in/sr_14/video.m3u8"
+  },
+  {
+    "Name": "PMCTelugu",
+    "Url": "https://live.drmlive-02.workers.dev/yupptv/fta/pmc.m3u8"
+  },
+  {
+    "Name": "BathukammaTV",
+    "Url": "http://live.streamplay.in:1935/bkamma/bkamma/playlist.m3u8"
+  },
+  {
+    "Name": "TR9TV",
+    "Url": "https://live.tr9tv.com/tr9tv/myStream/playlist.m3u8"
+  },
+  {
+    "Name": "StudioNNews",
+    "Url": "https://cdn-1.pishow.tv/live/403/master.m3u8"
+  },
+  {
+    "Name": "108TV",
+    "Url": "http://live.streamplay.in:1935/108tv/108tv/playlist.m3u8"
+  },
+  {
+    "Name": "SatyaNews",
+    "Url": "http://103.146.170.102:1935/satya/satya/playlist.m3u8"
+  },
+  {
+    "Name": "SwaranTV",
+    "Url": "https://amigofx.com:1936/wpndigital/wpndigital/playlist.m3u8"
+  },
+  {
+    "Name": "ManaTVHD",
+    "Url": "https://catchup.yuppcdn.net/amazonv2/36/preview/manatv/master/chunklist.m3u8"
+  },
+  {
+    "Name": "ManaTVHD2",
+    "Url": "https://manatv.akamaized.net/120723/smil:manatv2.smil/playlist.m3u8"
+  },
+  {
+    "Name": "ManaTVHDinternational",
+    "Url": "https://manatv.akamaized.net/090823/smil:manatvint.smil/playlist.m3u8"
+  },
+  {
+    "Name": "VPowerNews",
+    "Url": "https://vvsolutions.in/vpowernews_343/vpowernews_343.m3u8"
+  },
+  {
+    "Name": "SVCChannel",
+    "Url": "http://cloud.streamplay.in:1935/svc/svc/playlist.m3u8"
+  },
+  {
+    "Name": "BhavyaTV",
+    "Url": "http://encode.streamplay.in:1935/bhavyatv/bhavyatv/playlist.m3u8"
+  },
+  {
+    "Name": "SV6News",
+    "Url": "http://cloud.streamplay.in:1935/sv6/sv6/playlist.m3u8"
+  },
+  {
+    "Name": "Mega9TV",
+    "Url": "http://live.streamplay.in:1935/news9/news9/playlist.m3u8"
+  },
+  {
+    "Name": "TNNNews",
+    "Url": "http://cloud.streamplay.in:1935/tnn/tnn/playlist.m3u8"
+  },
+  {
+    "Name": "SNNewsTelugu",
+    "Url": "http://live.streamplay.in:1935/snnews/snnews/playlist.m3u8"
+  },
+  {
+    "Name": "SarkarTV",
+    "Url": "https://amigofx.com:1936/sarkartv/sarkartv/playlist.m3u8"
+  },
+  {
+    "Name": "DNews",
+    "Url": "http://dnews.phoenixcreations.online:1935/dnews/dnews/playlist.m3u8"
+  },
+  {
+    "Name": "TirumalaChannelsHD",
+    "Url": "http://cloud.streamplay.in:1935/tmc/tmc/playlist.m3u8"
+  },
+  {
+    "Name": "BBRTV",
+    "Url": "http://bbrtv.phoenixcreations.online/bbrtv/bbrtv/tracks-v1a1/mono.m3u8"
+  },
+  {
+    "Name": "SuperTV",
+    "Url": "http://mars.streambridge.cloud:1935/livetv/SuperTV/playlist.m3u8"
+  },
+  {
+    "Name": "BCNMovies",
+    "Url": "https://vvsolution.in/hls/bcntv_633.m3u8"
+  },
+  {
+    "Name": "BCNMusic",
+    "Url": "https://vvsolutions-server11.in/bcnmusic_24/video.m3u8"
+  },
+  {
+    "Name": "JNews",
+    "Url": "https://streamlive.livebox.co.in/JNewshls/live.m3u8"
+  },
+  {
+    "Name": "CityNewsTelugu",
+    "Url": "http://citynews.mythrimediaindia.com:1935/citynews/citynews/index.m3u8"
+  },
+  {
+    "Name": "SitiMovies",
+    "Url": "https://amigofx.com:1936/harikastar/harikastar/playlist.m3u8"
+  },
+  {
+    "Name": "PNews",
+    "Url": "http://pnews.phoenixcreations.online/pnews/pnews/tracks-v1a1/mono.m3u8"
+  },
+  {
+    "Name": "RK9News",
+    "Url": "https://vvsolutions.in/rk9news/rk9news.m3u8"
+  },
+  {
+    "Name": "CNews",
+    "Url": "http://cnews.phoenixcreations.online/cnews/cnews/tracks-v1a1/mono.m3u8"
+  },
+  {
+    "Name": "CCCHD",
+    "Url": "https://amigofx.com:1936/ccchd/ccchd/playlist.m3u8"
+  },
+  {
+    "Name": "SSNewsHD",
+    "Url": "http://streamcp.logosys.cloud:1935/snewsnpt/snewsnpt/playlist.m3u8"
+  },
+  {
+    "Name": "SSTVHD",
+    "Url": "https://5dd3981940faa.streamlock.net/snewsnpt/snewsnpt/playlist.m3u8"
+  },
+  {
+    "Name": "TollyTV",
+    "Url": "https://streams2.sofast.tv/ptnr-yupptv/title-TOLLY-TV-TEL_yupptv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/13b5735d-52c3-4be0-853d-e0ec0127e708/manifest.m3u8"
+  },
+  {
+    "Name": "MangoTV",
+    "Url": "https://amg01911-mangotv-amg01911c1-xiaomi-in-1270.playouts.now.amagi.tv/playlist/amg01911-mangomassmedia-mangotv-xiaomiin/playlist.m3u8"
+  },
+  {
+    "Name": "MTVLocal",
+    "Url": "https://amigofx.com:1936/mtv/mtv/playlist.m3u8"
+  },
+  {
+    "Name": "SaaksyamTV",
+    "Url": "https://live.kpsnetwork.in/kps/kps/index.m3u8"
+  },
+  {
+    "Name": "SNTV",
+    "Url": "https://live.sntvtelugu.com/sntvtelugu/livetv/playlist.m3u8"
+  },
+  {
+    "Name": "K2NEWS",
+    "Url": "https://k2new.in/hls/k2news.m3u8"
+  },
+  {
+    "Name": "VVComedyHD",
+    "Url": "http://allchannels.in:80/live/vvcomedy_100/tracks-v1a1/mono.m3u8"
+  },
+  {
+    "Name": "VVMoviesHD",
+    "Url": "http://allchannels.in:80/live/vvmovies_100/tracks-v1a1/mono.m3u8"
+  },
+  {
+    "Name": "VVMusicHD",
+    "Url": "http://allchannels.in:80/live/vvmusic_100/tracks-v1a1/mono.m3u8"
+  },
+  {
+    "Name": "A1TV",
+    "Url": "http://183.82.119.7:1935/a1tv/a1tv/playlist.m3u8"
+  },
+  {
+    "Name": "STVMovies",
+    "Url": "https://vvsolutions.in/pvphd/pvphd.m3u8"
+  },
+  {
+    "Name": "STVGold",
+    "Url": "https://vvsolutions.in/pvpmovies/pvpmovies.m3u8"
+  },
+  {
+    "Name": "VCNTV",
+    "Url": "https://vvsolutions-server11.in/vcn𝐓𝐞𝐥𝐮𝐠𝐮_42/video.m3u8"
+  },
+  {
+    "Name": "GarudaTV",
+    "Url": "https://mars.streambridge.cloud:443/GarudaTV/live/playlist.m3u8"
+  },
+  {
+    "Name": "GNTTV",
+    "Url": "https://amigofx.com:1936/srkent/srkent/playlist.m3u8"
+  },
+  {
+    "Name": "KTimes",
+    "Url": "https://vvsolutions.in/ktimes/ktimes.m3u8"
+  },
+  {
+    "Name": "MTV",
+    "Url": "https://vvsolutions.in/mtvchannel/mtvchannel.m3u8"
+  },
+  {
+    "Name": "SreeNews",
+    "Url": "https://vvsolutions.in/sreenews/sreenews.m3u8"
+  },
+  {
+    "Name": "Orugallu9",
+    "Url": "https://vvsolutions.in/orugallu9/orugallu9.m3u8"
+  },
+  {
+    "Name": "SLN",
+    "Url": "https://vvsolutions-server11.in/slnnews_2/video.m3u8"
+  },
+  {
+    "Name": "ReshyaTV",
+    "Url": "https://vvsolutions-server11.in/reshyatv_5/video.m3u8"
+  },
+  {
+    "Name": "YJTV",
+    "Url": "https://vvsolutions.in/yjtv/yjtv.m3u8"
+  },
+  {
+    "Name": "ChittoorTVHD",
+    "Url": "https://server.streamwell.in/hls/chittoortvhd.m3u8"
+  },
+  {
+    "Name": "SRKHD",
+    "Url": "https://server.streamwell.in/hls/srkcity.m3u8"
+  },
+  {
+    "Name": "RKTV",
+    "Url": "https://vvsolutions.in/rktv_347/rktv_347.m3u8"
+  },
+  {
+    "Name": "PublicTV",
+    "Url": "https://vvsolutions.in/publictv/publictv.m3u8"
+  },
+  {
+    "Name": "PublicMusic",
+    "Url": "https://vvsolutions.in/publictvfolkmusic/publictvfolkmusic.m3u8"
+  },
+  {
+    "Name": "TV8News",
+    "Url": "https://vvsolutions.in/tv8news/tv8news.m3u8"
+  },
+  {
+    "Name": "AksharaNews",
+    "Url": "https://vvsolutions.in/aksharanews/aksharanews.m3u8"
+  },
+  {
+    "Name": "SravyaTV",
+    "Url": "https://vvsolutions.in/sravyatv/sravyatv.m3u8"
+  },
+  {
+    "Name": "AccessTV",
+    "Url": "https://vvsolutions.in/accesstv/accesstv.m3u8"
+  },
+  {
+    "Name": "MY3Telugu",
+    "Url": "https://vvsolutions.in/my3telugu/my3telugu.m3u8"
+  },
+  {
+    "Name": "S9Channel",
+    "Url": "https://sharsolution.in/hls/s9tv/s9tv.m3u8"
+  },
+  {
+    "Name": "KBRNews",
+    "Url": "https://vvsolution.in/hls/jvrnews_623.m3u8"
+  },
+  {
+    "Name": "BathakammaTV",
+    "Url": "https://mumbai-edge.smartplaytv.in/BathukammaTV/index.m3u8"
+  },
+  {
+    "Name": "YSRTV",
+    "Url": "https://vvsolutions.in/ysrtv/ysrtv.m3u8"
+  },
+  {
+    "Name": "PCNHD",
+    "Url": "https://amigofx.com:1936/pcnhd/pcnhd/playlist.m3u8"
+  },
+  {
+    "Name": "KCF",
+    "Url": "https://amigofx.com:1936/kcf/kcf/playlist.m3u8"
+  },
+  {
+    "Name": "SitiChannel",
+    "Url": "https://amigofx.com:1936/sitichannel/sitichannel/playlist.m3u8"
+  },
+  {
+    "Name": "SITITelugu",
+    "Url": "https://amigofx.com:1936/sititelugu/sititelugu/playlist.m3u8"
+  },
+  {
+    "Name": "SanthoshamTV",
+    "Url": "https://vvsolutions-server10.in/hls/santhoshamtv_110.m3u8"
+  },
+  {
+    "Name": "APLocalTV",
+    "Url": "https://vvsolutions.in/aplocaltv/aplocaltv.m3u8"
+  },
+  {
+    "Name": "ZoyHD",
+    "Url": "https://rtmp.streamwell.in/hls/zoyhd.m3u8"
+  },
+  {
+    "Name": "MasthiTV",
+    "Url": "https://mumbai-edge.smartplaytv.in/MastiMusic/index.m3u8"
+  },
+  {
+    "Name": "SDTV",
+    "Url": "https://mumbai-edge.smartplaytv.in/SDTV/index.m3u8"
+  },
+  {
+    "Name": "ShakthiTv",
+    "Url": "https://cloud.smartplaytv.in/ShakthiTv/index.m3u8"
+  },
+  {
+    "Name": "TelanganaSamskruthi",
+    "Url": "http://cloud.streamplay.in:1935/telanganasamskruthi/telanganasamskruthi/playlist.m3u8"
+  },
+  {
+    "Name": "CowaTv",
+    "Url": "http://live.streamplay.in:1935/cowa/cowa/playlist.m3u8"
+  },
+  {
+    "Name": "TV7Hills",
+    "Url": "https://server.streamwell.in/hls/7hills.m3u8"
+  },
+  {
+    "Name": "S9Channel",
+    "Url": "https://sharsolution.in/hls/s9tv/s9tv.m3u8"
+  },
+  {
+    "Name": "SSNewsTv",
+    "Url": "http://streamcp.logosys.cloud:1935/snewsnpt/snewsnpt/playlist.m3u8"
+  },
+  {
+    "Name": "ParajaTV",
+    "Url": "http://prajatv.mythrimediaindia.com:1935/prajatv/prajatv/index.m3u8"
+  },
+  {
+    "Name": "Studio18Tv",
+    "Url": "http://cloud.streamplay.in:1935/studio18/studio18/playlist.m3u8"
+  },
+  {
+    "Name": "SityCCCTv",
+    "Url": "http://cloud.streamplay.in:1935/ccc/ccc/playlist.m3u8"
+  },
+  {
+    "Name": "GreaterGunturVoice",
+    "Url": "http://cloud.streamplay.in:1935/ggv/ggv/playlist.m3u8"
+  },
+  {
+    "Name": "News9Today",
+    "Url": "http://live.streamplay.in:1935/news9/news9/playlist.m3u8"
+  },
+  {
+    "Name": "MATelanganaTV",
+    "Url": "http://telanganatv.phoenixcreations.online:1935/telanganatv/telanganatv/playlist.m3u8"
+  },
+  {
+    "Name": "ManaTeluguTV",
+    "Url": "http://decode.streamplay.in:1935/telugutv/telugutv/playlist.m3u8"
+  },
+  {
+    "Name": "Zillavani",
+    "Url": "https://streaming.livebox.co.in/vedhikahls/live.m3u8"
+  },
+  {
+    "Name": "My3Telugu",
+    "Url": "http://telugusolutions.com:8088/my3telugu/my3telugu.m3u8"
+  },
+  {
+    "Name": "MeeTV",
+    "Url": "https://sharsolution.in/hls/meetv/meetv.m3u8"
+  },
+  {
+    "Name": "Channel9News",
+    "Url": "http://channel9hd.in:1935/hd/hd/playlist.m3u8"
+  },
+  {
+    "Name": "BV9News",
+    "Url": "http://rikuta.in:1935/bv9/bv9/chunklist_w1435248932.m3u8"
+  },
+  {
+    "Name": "VihariTv",
+    "Url": "http://viharitv.phoenixcreations.online:1935/viharitv/viharitv/playlist.m3u8"
+  },
+  {
+    "Name": "4SidesTV",
+    "Url": "https://mars.streambridge.cloud/4sidestv/telugu/playlist.m3u8"
   }
 ]
