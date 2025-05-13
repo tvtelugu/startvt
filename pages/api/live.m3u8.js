@@ -4,6 +4,7 @@ import { promises as fs } from 'fs';
 
 // Cache configuration
 const CACHE_TTL = 5 * 60 * 1000; // 5 minutes cache
+const FALLBACK_STREAM = 'https://tvtelugu.github.io/er/720p.m3u8';
 let channelCache = {
   data: null,
   lastUpdated: 0
@@ -44,6 +45,28 @@ async function loadChannels() {
   }
 }
 
+async function fetchStream(streamUrl) {
+  try {
+    // For m3u8 playlists, proxy the content
+    if (streamUrl.endsWith('.m3u8')) {
+      const proxyResponse = await fetch(streamUrl);
+      if (!proxyResponse.ok) throw new Error('Stream unavailable');
+      return {
+        type: 'm3u8',
+        content: await proxyResponse.text()
+      };
+    }
+    // For direct streams, return the URL
+    return {
+      type: 'redirect',
+      url: streamUrl
+    };
+  } catch (error) {
+    console.error('Stream fetch error:', error);
+    throw error;
+  }
+}
+
 export default async function handler(req, res) {
   // Set proper headers for m3u8 content
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -62,27 +85,42 @@ export default async function handler(req, res) {
     const streamUrl = channels[id.toLowerCase()];
 
     if (!streamUrl) {
-      res.status(404).json({ error: 'Channel not found' });
+      // Channel not found, use fallback
+      console.log(`Channel ${id} not found, using fallback stream`);
+      const fallback = await fetchStream(FALLBACK_STREAM);
+      if (fallback.type === 'm3u8') {
+        res.setHeader('Content-Type', 'application/vnd.apple.mpegurl');
+        res.send(fallback.content);
+      } else {
+        res.redirect(307, fallback.url);
+      }
       return;
     }
 
-    // For m3u8 playlists, we might want to proxy the content
-    if (streamUrl.endsWith('.m3u8')) {
-      const proxyResponse = await fetch(streamUrl);
-      const playlist = await proxyResponse.text();
-      res.setHeader('Content-Type', 'application/vnd.apple.mpegurl');
-      res.send(playlist);
-    } 
-    // For direct streams, redirect
-    else {
-      res.redirect(307, streamUrl);
+    // Try to fetch the requested stream
+    try {
+      const stream = await fetchStream(streamUrl);
+      if (stream.type === 'm3u8') {
+        res.setHeader('Content-Type', 'application/vnd.apple.mpegurl');
+        res.send(stream.content);
+      } else {
+        res.redirect(307, stream.url);
+      }
+    } catch (error) {
+      // If main stream fails, use fallback
+      console.log(`Stream for ${id} failed, using fallback`);
+      const fallback = await fetchStream(FALLBACK_STREAM);
+      if (fallback.type === 'm3u8') {
+        res.setHeader('Content-Type', 'application/vnd.apple.mpegurl');
+        res.send(fallback.content);
+      } else {
+        res.redirect(307, fallback.url);
+      }
     }
     
   } catch (error) {
     console.error('Stream error:', error.message);
-    const status = error.message.includes('unavailable') ? 503 : 500;
-    res.status(status).json({ 
-      error: error.message || 'Failed to process stream request' 
-    });
+    // Even if everything fails, try to redirect to fallback
+    res.redirect(307, FALLBACK_STREAM);
   }
 }
