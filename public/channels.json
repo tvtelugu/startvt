@@ -1,5 +1,25 @@
 [
   {
+    "Name": "ETVHD",
+    "Url": "https://d1rznlx03muoan.cloudfront.net/v1/master/9d43eacaed199f8d5883927e7aef514a8a08e108/ETV_HD_H264_cloud_in/index.m3u8"
+  },
+  {
+    "Name": "ETVPlus",
+    "Url": "https://d2pk5pedkyu2d0.cloudfront.net/v1/master/9d43eacaed199f8d5883927e7aef514a8a08e108/ETV_PLUS_H264_cloud_in/index.m3u8"
+  },
+  {
+    "Name": "ETVCinema",
+    "Url": "https://d27zlkxhgwrfgo.cloudfront.net/v1/master/9d43eacaed199f8d5883927e7aef514a8a08e108/ETV_CINEMA_H264_cloud_in/index.m3u8"
+  },
+  {
+    "Name": "ETVLife",
+    "Url": "https://d2cj1h11htct8o.cloudfront.net/v1/master/9d43eacaed199f8d5883927e7aef514a8a08e108/ETV_LIFE_H264_cloud_in/index.m3u8"
+  },
+  {
+    "Name": "ETVAbhiruchi",
+    "Url": "https://dg3721c3ez5m0.cloudfront.net/v1/master/9d43eacaed199f8d5883927e7aef514a8a08e108/ETV_ABHIRUCHI_H264_cloud-in/index.m3u8"
+  },
+  {
     "Name": "Starsports",
     "Url": "https://starshare.st:443/live/42166/42166/177843.ts"
   },
